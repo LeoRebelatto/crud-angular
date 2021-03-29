@@ -1,0 +1,15 @@
+<section>
+    <div>
+        usuário:
+        <input type="text" [(ngModel)]="user.nome">
+        <button (click)="adicionarUsuario()"> Adicionar</button>
+    </div>
+    <p>usuário: {{ user.nome }}</p>
+
+    <p> Lista de Usuários: Clique para remover</p>
+    <ul>
+        <li *ngFor="let usuario of usuarios" (click)="RemoverUsuario(usuario._id)">
+            {{ usuario.nome }}
+        </li>
+    </ul> 
+  </section>
